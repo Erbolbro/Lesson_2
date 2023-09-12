@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class Main {
     public static void main(String[] args) {
         System.out.println(weather(4, 15));
@@ -5,6 +7,7 @@ public class Main {
         System.out.println(weather(50, 5));
         System.out.println(weather(35, -15));
         System.out.println(weather(22, 31));
+        System.out.println(random());
     }
 
     public static String weather(int age, int temperature) {
@@ -17,5 +20,11 @@ public class Main {
         } else {
             return "оставайтесь дома";
         }
+    }
+
+    public static int random() {
+        Random rand = new Random();
+        int randomNumber = rand.nextInt(100);
+        return randomNumber;
     }
 }
